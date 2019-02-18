@@ -1,0 +1,33 @@
+{
+	"name": "p1",
+	"version": "1.0.0",
+	"description": "In this project we are going to create a simple React application for a company called Pro Gamers. Their application should include a navigation bar which contains three anchors to Top 10 Games, News and About. The initial page should be News and the other anchors are only for display because routing should NOT be implemented in this project. In the News section there should be a title, a search feature which can search through within the news and a filter depending on the category. Each news item within the list should have a title, short description and a category. The project should be structured in a modular manner. All news data are within the state of MainContent",
+	"main": "index.js",
+	"scripts": {
+		"start": "webpack-dev-server --config ./webpack.config.js",
+		"package": "webpack",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"react": "^16.8.2",
+		"react-dom": "^16.8.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.3.3",
+		"@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+		"@babel/preset-env": "^7.3.1",
+		"@babel/preset-react": "^7.0.0",
+		"babel-loader": "^8.0.5",
+		"css-loader": "^2.1.0",
+		"html-webpack-plugin": "^3.2.0",
+		"less": "^3.9.0",
+		"less-loader": "^4.1.0",
+		"style-loader": "^0.23.1",
+		"webpack": "^4.29.5",
+		"webpack-cli": "^3.2.3",
+		"webpack-dev-server": "^3.1.14"
+	}
+}

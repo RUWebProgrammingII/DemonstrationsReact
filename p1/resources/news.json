@@ -1,0 +1,24 @@
+{
+	"news": [{
+			"id": 1,
+			"title": "Zombie apocalypse!",
+			"shortDescription": "A zombie apocalypse has broken loose! All residents are encouraged to lock their doors shut!",
+			"longDescription": "If - or when - the zombie apocalypse comes, those of us in big cities are in trouble, according to research presented at the American Physical Society March meeting on 5 March 2015. Starting in a big city like New York or Atlanta means you are basically screwed from the start in the event of a zombie epidemic there, according to Alex Alemi, a graduate student at Cornell University who was part of the research team. You are much better off starting farther away from people, they say, which gives you a better chance of avoiding infection.Ideally, you 'd escape to an almost empty region like the Rocky Mountains. \"I'd love to see a fictional account where most of New York City falls in a day, but upstate New York has a month or so to prepare,\" Alemi said in the APS press release.",
+			"category": "world"
+		},
+		{
+			"id": 2,
+			"title": "BitCoin has dropped!",
+			"shortDescription": "BitCoin took a steep dip this morning going from $8000 to $100. Wall Street is in wreck.",
+			"longDescription": "As CCN noted in yesterday’s report, in periods of extreme volatility, the vast majority of cryptocurrencies in the market tend to follow the trend of two major cryptocurrencies: bitcoin and Ethereum. This morning, the price of both bitcoin and Ether, the native cryptocurrency of the Ethereum network, fell by 10 percent, erasing gains made on February 10. Ethereum peaked at $909 less than 24 hours ago, but throughout the rally, the daily trading volume of Ether across all major exchanges remained relatively low.Consequently, over the past 12 hours, the price of Ether declined from $909 to $793, stabilizing at $810.Given that Ether has experienced a steep decline in the past 24 hours, it is unlikely that the price of Ether would continue to decline unless it dips below $800.",
+			"category": "financial"
+		},
+		{
+			"id": 3,
+			"title": "PS5 has announced its debut",
+			"shortDescription": "Sony has announced the new PS5! Tokyo goes wild!",
+			"longDescription": "The PS5 will exist. It probably exists in some form right now, and unless the world suddenly comes to a stop and life ceases to exist, the PS5 will be releasing from Sony in the future. But when could the PlayStation 5 potentially release, and what games could debut on the platform? In this PS5 guide, we’ll be rounding up all the PS5 rumors that have made their way out into the wild, as well as offering up our own speculation on the future of Sony’s home console. Details are thin on the ground, but here's our take on the PS5, including a rough overview of the potential power of the PS5 and the PS5 release date. We also look at when we might hear something from Sony about the PS5. ",
+			"category": "technology"
+		}
+	]
+}
