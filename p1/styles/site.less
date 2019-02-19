@@ -1,6 +1,24 @@
+* { box-sizing: border-box; }
+
 body {
     background-color: #52DEE5;
     color: #7C7C7C;
+    .navigation-bar {
+        display: block;
+        height: 150px;
+        border-bottom: solid 2px rgba(155, 155, 155, .5);
+        background-color: gray;
+        ul.navigation-links {
+            list-style: none !important;
+            display: block;
+            float: right;
+            li {
+                display: inline-block;
+                color: black;
+                padding: 10px;
+            }
+        }
+    }
     .container {
         width: 1196px;
         margin: 0 auto;
@@ -23,4 +41,9 @@ body {
             font-size: 1.2em;
         }
     }
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }

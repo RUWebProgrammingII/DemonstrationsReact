@@ -1,8 +1,13 @@
 import React from 'react';
+import NavigationBar from './NavigationBar/NavigationBar';
+import Container from './Container/Container';
 
 const App = () => {
     return (
-        <h1>Hello World!</h1>
+        <div>
+            <NavigationBar />
+            <Container />
+        </div>
     )
 };
 
