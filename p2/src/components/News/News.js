@@ -4,7 +4,7 @@ import ListView from '../ListView/ListView';
 import SearchBar from '../SearchBar/SearchBar';
 import CategoryFilter from '../CategoryFilter/CategoryFilter';
 
-class Container extends React.Component {
+class News extends React.Component {
     componentDidMount() {
         var news = getNews();
         this.setState({
@@ -29,7 +29,7 @@ class Container extends React.Component {
     }
     render() {
         return (
-            <div className="container">
+            <div>
                 <SearchBar onInput={e => this.onFilter(e)} />
                 <CategoryFilter onChange={e => this.onRadio(e)} />
                 <ListView list={ this.state.news } />
@@ -38,4 +38,4 @@ class Container extends React.Component {
     };
 };
 
-export default Container;
+export default News;
