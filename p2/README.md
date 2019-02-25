@@ -11,4 +11,9 @@ Also add dynamic links when a news item is pressed, it should return a detailed 
 The components Top 10 Games and About are provided.
 
 ### PropTypes
-We are going to expand on our project and introduce good practices when defining components in React. The expansions is to define PropTypes for all our components who receive props. Also make use of defaultProps where they make sense. Introduce a global user within the application. It can be hard-coded for now. The App should hold on to the user.
+We are going to expand on our project and introduce good practices when defining components in React. The expansions is to define PropTypes for all our components who receive props. Also make use of defaultProps where they make sense.
+
+### Context
+Introduce a global user within the application. It can be hard-coded for now. The App should hold on to the user and display it within the navigation bar and also the footer (which needs to be created). Within the footer we should also add a button which you can click on to change the global user.
+
+Now let's create another context which introduces a dark and light theme. This should change the navigation bar and footer to dark/light theme. There should be a button within the footer that can toggle these values.
