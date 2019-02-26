@@ -1,11 +1,22 @@
 import React from 'react';
 import NavLinks from '../NavLinks/NavLinks';
+import User from '../User/User';
+import { ThemeConsumer } from '../../context/ThemeContext';
 
 const NavigationBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <NavLinks />
-        </nav>
+        <ThemeConsumer>
+            {
+                themeContext => {
+                    return (
+                        <nav className={`navbar navbar-expand-lg navbar-${themeContext.current} bg-${themeContext.current}`}>
+                            <NavLinks />
+                            <User />
+                        </nav>
+                    )
+                }
+            }
+        </ThemeConsumer>
     )
 };
 
