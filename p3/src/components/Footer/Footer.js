@@ -11,7 +11,7 @@ const Footer = () => {
                     return (
                         <UserConsumer>
                             { userContext => {
-                                return <footer className={ `navbar navbar-expand-lg navbar-fixed-bottom navbar-${themeContext.current} bg-${themeContext.current}` }>
+                                return <footer className={ `navbar fixed-bottom navbar-${themeContext.current} bg-${themeContext.current}` }>
                                     <User />
                                     <button type="button" onClick={() => userContext.changeUser({ username: 'jonb', fullName: 'Jon' })} className="btn btn-primary">Update User</button>
                                     <button type="button" onClick={() => themeContext.toggleTheme()} className="btn btn-primary">Toggle theme</button>
