@@ -1,7 +1,6 @@
 import React from 'react';
 import User from '../User/User';
 import NavLinks from '../NavLinks/NavLinks';
-import User from '../User/User';
 import { ThemeConsumer } from '../../context/ThemeContext';
 
 const NavigationBar = () => {

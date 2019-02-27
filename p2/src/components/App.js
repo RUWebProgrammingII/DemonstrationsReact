@@ -6,7 +6,6 @@ import News from './News/News';
 import NewsDetail from './NewsDetail/NewsDetail';
 import About from './About/About';
 import TopGames from './TopGames/TopGames';
-import Footer from './Footer/Footer';
 import { UserProvider } from '../context/UserContext';
 import { ThemeProvider } from '../context/ThemeContext';
 
