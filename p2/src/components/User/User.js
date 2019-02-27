@@ -4,11 +4,11 @@ import { UserConsumer } from '../../context/UserContext';
 const User = () => {
     return (
         <UserConsumer>
-            {
-                ({ info }) => <div>{ info.userName } - { info.fullName }</div>
-            }
+            { userContext => {
+                return <div><span>{ userContext.info.fullName }</span> - <span>{ userContext.info.username }</span></div>
+            } }
         </UserConsumer>
     )
-}
+};
 
 export default User;
