@@ -1,0 +1,34 @@
+{
+	"name": "p2",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "webpack-dev-server --config ./webpack.config.js --mode development",
+		"package": "webpack",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"react": "^16.8.2",
+		"react-dom": "^16.8.2",
+		"react-router-dom": "^4.3.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.3.3",
+		"@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+		"@babel/preset-env": "^7.3.1",
+		"@babel/preset-react": "^7.0.0",
+		"babel-loader": "^8.0.5",
+		"css-loader": "^2.1.0",
+		"html-webpack-plugin": "^3.2.0",
+		"less": "^3.9.0",
+		"less-loader": "^4.1.0",
+		"style-loader": "^0.23.1",
+		"webpack": "^4.29.5",
+		"webpack-cli": "^3.2.3",
+		"webpack-dev-server": "^3.1.14"
+	}
+}
