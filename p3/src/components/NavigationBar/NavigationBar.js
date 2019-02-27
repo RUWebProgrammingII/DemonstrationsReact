@@ -7,11 +7,14 @@ const NavigationBar = () => {
     return (
         <ThemeConsumer>
             {
-                themeContext =>
-                    <nav className={ `navbar navbar-expand-lg navbar-${ themeContext.current } bg-${ themeContext.current }` }>
-                        <NavLinks />
-                        <User />
-                    </nav>
+                themeContext => {
+                    return (
+                        <nav className={`navbar navbar-expand-lg navbar-${themeContext.current} bg-${themeContext.current}`}>
+                            <NavLinks />
+                            <User />
+                        </nav>
+                    )
+                }
             }
         </ThemeConsumer>
     )
