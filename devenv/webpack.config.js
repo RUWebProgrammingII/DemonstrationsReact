@@ -3,15 +3,12 @@ var path = require('path');
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'master.js'
     },
     module: {
         rules: [
-            {
-                test: /\.js/,
-                use: 'babel-loader'
-            }
+            { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' }
         ]
     }
 };
