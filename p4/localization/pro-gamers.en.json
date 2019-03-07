@@ -1,0 +1,37 @@
+{
+    "about": {
+        "title": "About us @ Pro Gamers",
+        "description": "We are Pro Gamers and we are ready to take on the big guns! We specialize in gaming, reviewing games and such! Feel free to check out our fabulous site!"
+    },
+    "navigationLinks": {
+        "news": "News",
+        "top10Games": "Top 10 Games",
+        "about": "About",
+        "signup": "Signup here!",
+        "profile": "Profile"
+    },
+    "placeholders": {
+        "search": "Enter search here.."
+    },
+    "buttons": {
+        "updateUser": "Update user",
+        "toggleTheme": "Toggle theme",
+        "updateProfile": "Update profile!",
+        "signup": "Sign up now!"
+    },
+    "profile": {
+        "title": "My Profile"
+    },
+    "labels": {
+        "fullName": "Enter full name",
+        "emailAddress": "Enter email address",
+        "telephone": "Enter telephone",
+        "address": "Enter address",
+        "addImage": "Add image"
+    },
+    "select": {
+        "countryDefault": "-- No country selected --",
+        "regionDefault": "-- No region selected --",
+        "cityDefault": "-- No city selected --"
+    }
+}

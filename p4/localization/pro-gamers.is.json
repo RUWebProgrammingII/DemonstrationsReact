@@ -1,0 +1,37 @@
+{
+    "about": {
+        "title": "Um okkur hjá Pro Gamers",
+        "description": "Við erum Pro Gamers og við erum tilbúnir að takast á við allt sem koma skal! Við státum okkur að sérstöðu okkur hvað varðar leiki, umfjöllun leikja o.s.frv.! Ekki hika við að kíkja á frábæru síðuna okkar!"
+    },
+    "navigationLinks": {
+        "news": "Fréttir",
+        "top10Games": "Topp 10 leikir",
+        "about": "Um okkur",
+        "signup": "Skrá hér!",
+        "profile": "Prófíll"
+    },
+    "placeholders": {
+        "search": "Sláðu inn leitarstreng.."
+    },
+    "buttons": {
+        "updateUser": "Uppfæra notanda",
+        "toggleTheme": "Skipta um þema",
+        "updateProfile": "Uppfæra prófíl!",
+        "signup": "Skrá sig núna!"
+    },
+    "profile": {
+        "title": "Prófíllinn minn"
+    },
+    "labels": {
+        "fullName": "Sláðu inn fullt nafn",
+        "emailAddress": "Sláðu inn netfang",
+        "telephone": "Sláðu inn símanúmer",
+        "address": "Sláðu inn heimilisfang",
+        "addImage": "Bæta við mynd"
+    },
+    "select": {
+        "countryDefault": "-- Ekkert land valið --",
+        "regionDefault": "-- Ekkert svæði valið --",
+        "cityDefault": "-- Enginn borg/bær valin --"
+    }
+}
