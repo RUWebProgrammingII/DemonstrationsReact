@@ -30,7 +30,7 @@ Input.propTypes = {
   htmlId: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   onInput: PropTypes.func.isRequired,
-  type: PropTypes.oneOf([ 'text', 'password', 'submit', 'email' ]),
+  type: PropTypes.oneOf([ 'text', 'password', 'submit', 'email', 'file' ]),
   errorMessage: PropTypes.string,
   label: PropTypes.string
 };
