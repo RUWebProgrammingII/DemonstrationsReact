@@ -1,12 +1,13 @@
 import React from 'react';
 import { UserConsumer } from '../../context/UserContext';
 import { ThemeConsumer } from '../../context/ThemeContext';
-import User from '../User/User';
 import { connect } from 'react-redux';
+import User from '../User/User';
+import RoundedImage from '../RoundedImage/RoundedImage';
 
 const Footer = props => {
-    const { user } = props;
-    const { updateUser, toggleTheme } = props.translations;
+    const { imgUrl } = props;
+    console.log(imgUrl);
     return (
         <ThemeConsumer>
             {
@@ -15,9 +16,10 @@ const Footer = props => {
                         <UserConsumer>
                             { userContext => {
                                 return <footer className={ `navbar fixed-bottom navbar-${themeContext.current} bg-${themeContext.current}` }>
-                                    <User imgUrl={ user.imgUrl } />
-                                    <button type="button" onClick={() => userContext.changeUser({ username: 'jonb', fullName: 'Jon' })} className="btn btn-primary">{ updateUser }</button>
-                                    <button type="button" onClick={() => themeContext.toggleTheme()} className="btn btn-primary">{ toggleTheme }</button>
+                                    <RoundedImage imgUrl={ imgUrl } />
+                                    <User />
+                                    <button type="button" onClick={() => userContext.changeUser({ username: 'jonb', fullName: 'Jon' })} className="btn btn-primary">Update User</button>
+                                    <button type="button" onClick={() => themeContext.toggleTheme()} className="btn btn-primary">Toggle theme</button>
                                 </footer>
                             } }
                         </UserConsumer>
@@ -30,10 +32,10 @@ const Footer = props => {
 };
 
 const mapStateToProps = reduxStoreState => {
-    return {
-        user: reduxStoreState.user,
-        translations: reduxStoreState.language.buttons
-    };
+  return {
+    /* I have the freedom to make this object look like I want */
+    imgUrl: reduxStoreState.user.encodedImg
+  };
 };
 
 export default connect(mapStateToProps)(Footer);

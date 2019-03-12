@@ -1,12 +1,15 @@
-import is from '../../localization/pro-gamers.is.json';
-import en from '../../localization/pro-gamers.en.json';
 import { CHANGE_LANGUAGE } from '../constants';
 
-const languages = { is, en };
+import is /* Valid JS representation of the JSON */ from '../../localization/pro-gamers.is.json';
+import en /* Valid JS representation of the JSON */ from '../../localization/pro-gamers.en.json';
 
-export default function(state = en, action) {
-    switch (action.type) {
-        case CHANGE_LANGUAGE: return languages[action.payload];
-        default: return state;
-    };
-}
+const languages = {
+  is, en
+};
+
+export default function(state = languages['is'], action) {
+  switch (action.type) {
+    case CHANGE_LANGUAGE: return languages[action.payload];
+    default: return state;
+  };
+};

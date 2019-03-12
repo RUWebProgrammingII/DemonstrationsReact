@@ -1,8 +1,8 @@
 import { CHANGE_LANGUAGE } from '../constants';
 
-export const changeLanguage = languageSelection => {
-    return {
-        type: CHANGE_LANGUAGE,
-        payload: languageSelection
-    };
-};
+export const changeLanguage = language => {
+  return {
+    type: CHANGE_LANGUAGE,
+    payload: language
+  }
+}

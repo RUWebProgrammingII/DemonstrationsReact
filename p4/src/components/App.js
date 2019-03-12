@@ -8,6 +8,7 @@ import About from './About/About';
 import TopGames from './TopGames/TopGames';
 import Profile from './Profile/Profile';
 import SignupForm from './SignupForm/SignupForm';
+import Profile from './Profile/Profile';
 import { UserProvider } from '../context/UserContext';
 import { ThemeProvider } from '../context/ThemeContext';
 

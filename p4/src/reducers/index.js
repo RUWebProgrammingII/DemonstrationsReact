@@ -3,6 +3,7 @@ import user from './userReducer';
 import language from './languageReducer';
 
 export default combineReducers({
-    user,
-    language
+  /* This is the Redux store state structure */
+  user,
+  language
 });

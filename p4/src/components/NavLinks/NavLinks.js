@@ -2,8 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const NavLinks = ({ translations }) => {
-    const { news, top10Games, about, signup, profile } = translations;
+const NavLinks = props => {
+    const { news, top10Games, about, signup, profile } = props.translations;
     return (
         <ul className="navbar-nav mr-auto">
             <li className="nav-item">
@@ -25,4 +25,10 @@ const NavLinks = ({ translations }) => {
     );
 };
 
-export default connect(({ language }) => ({ translations: language.navigationLinks }))(NavLinks);
+const mapStateToProps = reduxStoreState => {
+  return {
+    translations: reduxStoreState.language.navigationLinks
+  };
+};
+
+export default connect(mapStateToProps)(NavLinks);
