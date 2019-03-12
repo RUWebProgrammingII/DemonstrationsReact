@@ -1,12 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const About = () => {
+const About = ({ translations }) => {
+    const { title, description } = translations;
     return (
         <div>
-            <h1>About us @ Pro Gamers</h1>
-            <p>We are Pro Gamers and we are ready to take on the big guns! We specialize in gaming, reviewing games and such! Feel free to check out our fabulous site!</p>
+            <h1>{ title }</h1>
+            <p>{ description }</p>
         </div>
     )
 };
 
-export default About;
+const mapStateToProps = reduxState => {
+    return {
+        translations: reduxState.language.about
+    };
+};
+
+export default connect(mapStateToProps)(About);
