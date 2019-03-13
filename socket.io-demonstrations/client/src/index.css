@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1196px;
+}
+
+.input-large {
+    padding: 10px;
+}
+
+.button {
+    padding: 10px;
+}
+
+.chat-window .input-container {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.chat-window .input-container input {
+    width: 80%;
+    padding: 5px;
+}
+
+.chat-window .input-container button {
+    padding: 5px;
+}
+
+.chat-window .users {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    padding: 20px;
+    width: 60px;
+    height: 100%;
+    border: dashed 1px black;
+}
+
+.chat-window .users .user {
+    border-bottom: solid 1px black;
+    border-top: solid 1px black;
+    padding: 10px 0;
+}
+
+.chat-window {
+    position: relative;
+    border: solid 1px black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 2px darkgray;
+    background-size: 100% 40px, auto;
+    background-image:
+        linear-gradient(to top right, white, white 50px, pink),
+        linear-gradient(to bottom, black, black 1px, white 1px, white 40px, black 40px, black 42px, white 42px, white);
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+    animation: move-shadow 1s ease-in alternate infinite;
+    overflow: hidden;
+}
+
+@keyframes move-shadow {
+    from { box-shadow: 5px 5px 10px 2px darkgray; }
+    to { box-shadow: -5px 5px 10px 2px darkgray; }
+}
+
+.chat-window h3 {
+    position: relative;
+    top: -10px;
+    text-align: center;
+}
+
+@keyframes from-red-to-blue {
+    from { color: red; }
+    to { color: blue; }
+}
+
+@keyframes from-blue-to-purple {
+    from { color: blue; }
+    to { color: purple; }
+}
+
+@keyframes from-purple-to-green {
+    from { color: purple; }
+    to { color: green; }
+}
+
+@keyframes from-green-to-red {
+    from { color: green; }
+    to { color: red; }
+}
+
+.chat-window h3 span.first {
+    animation: from-red-to-blue 1s ease-in infinite alternate;
+    color: red;
+}
+
+.chat-window h3 span.second {
+    animation: from-blue-to-purple 1s ease-in infinite alternate;
+    color: blue;
+}
+
+.chat-window h3 span.third {
+    animation: from-purple-to-green 1s ease-in infinite alternate;
+    color: purple;
+}
+
+.chat-window h3 span.fourth {
+    animation: from-green-to-red 1s ease-in infinite alternate;
+    color: green;
+}
+
+.chat-window h3 span.fifth {
+    animation: from-red-to-blue 1s ease-in infinite alternate;
+    color: red;
+}
+
+.chat-window h3 span.sixth {
+    animation: from-blue-to-purple 1s ease-in infinite alternate;
+    color: blue;
+}
+
+.chat-window h3 span.seventh {
+    animation: from-purple-to-green 1s ease-in infinite alternate;
+    color: purple;
+}
+
+.chat-window h3 span.eight {
+    animation: from-green-to-red 1s ease-in infinite alternate;
+    color: green;
+}
