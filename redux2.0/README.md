@@ -32,7 +32,7 @@ npm install react-redux redux and start setting up Redux for this project.
 ## Project 3
 Let's rename our reducer to counterReducer and create another called userReducer. The userReducer should have an initial state of an empty object
 
-    1. nameReducer should accept CHANGE_USER which accepts a payload:
+    1. userReducer should accept CHANGE_USER which accepts a payload:
         { name: '', age: 0 };
 
     2. Create an action creator called changeUser which accepts a name and age as parameters and returns an object:

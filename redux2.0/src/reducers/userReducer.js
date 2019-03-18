@@ -1,9 +1,10 @@
+import { CHANGE_USER } from '../constants';
 
-const userReducer = (state = {}, action) => {
-    switch (action.type) {
-        case 'CHANGE_USER': return action.payload;
-        default: return state;
-    }
+export default function(state = {}, action) {
+  switch (action.type) {
+    case CHANGE_USER:
+      console.log(action.payload);
+      return action.payload;
+    default: return state;
+  }
 };
-
-export default userReducer;
