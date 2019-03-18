@@ -26,6 +26,7 @@
   ],
   "devDependencies": {
     "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
     "mock-socket": "^8.0.5"
   }
 }

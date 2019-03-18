@@ -1,10 +1,9 @@
 import React from 'react';
-import SocketContext from './contexts/SocketContext';
+import { socket } from './services/socketService';
 import ChatWindow from './components/ChatWindow/ChatWindow';
 
 class App extends React.Component {
     componentDidMount() {
-        const { socket } = this.context;
         socket.on('users', userList => {
             this._populateUserList(userList);
         });
@@ -29,7 +28,5 @@ class App extends React.Component {
         );
     }
 };
-
-App.contextType = SocketContext;
 
 export default App;

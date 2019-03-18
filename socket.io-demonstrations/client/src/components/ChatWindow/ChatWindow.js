@@ -1,9 +1,9 @@
 import React from 'react';
-import SocketContext from '../../contexts/SocketContext';
+import { socket } from '../../services/socketService';
 
 class ChatWindow extends React.Component {
     componentDidMount() {
-        const { socket } = this.context;
+        console.log(socket);
         socket.on('message', message => {
             const { messages } = this.state;
             this.setState({ messages: [ ...messages, message ] });
@@ -17,7 +17,6 @@ class ChatWindow extends React.Component {
         };
     }
     sendMessage(message) {
-        const { socket } = this.context;
         if (message === '') { return false; }
         socket.emit('message', message);
         this.setState({ message: '' });
@@ -62,7 +61,5 @@ ChatWindow.Users = props => (
         { props.users.map(u => <div key={ u } className="user">{ u }</div>) }
     </div>
 );
-
-ChatWindow.contextType = SocketContext;
 
 export default ChatWindow;
