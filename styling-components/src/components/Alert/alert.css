@@ -1,0 +1,36 @@
+.alert {
+  padding: 20px;
+  margin: 10px 0;
+  border-bottom-style: solid;
+  border-bottom-width: 8px;
+  color: white;
+}
+
+.alert-info {
+  background-color: blue;
+  border-bottom-color: darkblue;
+}
+
+.alert-warning {
+  background-color: orange;
+  border-bottom-color: darkorange;
+}
+
+.alert-success {
+  background-color: green;
+  border-bottom-color: darkgreen;
+}
+
+.alert-danger {
+  background-color: red;
+  border-bottom-color: darkred;
+}
+
+.alert .title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.alert .message {
+  font-size: 16px;
+}

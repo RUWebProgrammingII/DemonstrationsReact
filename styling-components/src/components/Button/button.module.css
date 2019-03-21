@@ -1,0 +1,29 @@
+.btn {
+  padding: 10px;
+  box-shadow: 5px 5px 5px 5px rgba(155, 155, 155, .5);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  transition: transform 1s linear;
+}
+
+.btn:hover {
+  transform: translateX(-10px);
+}
+
+.success {
+  composes: btn;
+  background-color: green;
+  border-bottom-color: darkgreen;
+}
+
+.warning {
+  composes: btn;
+  background-color: orange;
+  border-bottom-color: darkorange;
+}
+
+.danger {
+  composes: btn;
+  background-color: red;
+  border-bottom-color: darkred;
+}

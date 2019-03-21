@@ -1,0 +1,21 @@
+.btn {
+  padding: 10px;
+  box-shadow: 5px 5px 5px 5px rgba(155, 155, 155, .5);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+}
+
+.btn-success {
+  background-color: green;
+  border-bottom-color: darkgreen;
+}
+
+.btn-warning {
+  background-color: orange;
+  border-bottom-color: darkorange;
+}
+
+.btn-danger {
+  background-color: red;
+  border-bottom-color: darkred;
+}

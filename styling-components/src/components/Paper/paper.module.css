@@ -1,0 +1,22 @@
+.paper {
+  padding: 20px;
+  margin: 20px 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.small {
+  composes: paper;
+  box-shadow: 5px 5px 5px rgba(155, 155, 155, .5);
+}
+
+.medium {
+  composes: paper;
+  box-shadow: 10px 10px 10px rgba(155, 155, 155, .5);
+}
+
+.large {
+  composes: paper;
+  box-shadow: 15px 15px 15px rgba(155, 155, 155, .5);
+}
