@@ -1,0 +1,13 @@
+{
+	"name": "infinity-modules-al",
+	"version": "0.1.0",
+	"dependencies": {
+		"react": "^16.8.6"
+	},
+    "author": "Arnar Leifsson <arnarl@ru.is>",
+    "license": "ISC",
+    "keywords": [
+        "react",
+        "styling-react"
+    ]
+}
