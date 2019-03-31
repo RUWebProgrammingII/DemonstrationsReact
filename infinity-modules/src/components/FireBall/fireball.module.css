@@ -1,0 +1,19 @@
+.fireball {
+    border-radius: 50%;
+    background-image: radial-gradient(red, orange, yellow);
+}
+
+.small {
+    width: 100px;
+    height: 100px;
+}
+
+.medium {
+    width: 200px;
+    height: 200px;
+}
+
+.large {
+    width: 300px;
+    height: 300px;
+}

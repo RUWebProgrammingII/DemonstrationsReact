@@ -1,8 +1,10 @@
 {
 	"name": "infinity-modules-al",
 	"version": "0.1.0",
+	"main": "index.js",
 	"dependencies": {
-		"react": "^16.8.6"
+		"react": "^16.8.6",
+		"prop-types": "^15.7.2"
 	},
     "author": "Arnar Leifsson <arnarl@ru.is>",
     "license": "ISC",

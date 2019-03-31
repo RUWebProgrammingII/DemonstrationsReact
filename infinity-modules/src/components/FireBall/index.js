@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './styles';
-import './index.css';
+import styles from './fireball.module.css';
 
 const FireBall = ({ size }) => {
-    return <div className="fireball" style={ { ...styles.base, ...styles[size] } }></div>;
+    return <div className={`${styles.fireball} ${styles[size]}`}></div>
 };
 
 FireBall.propTypes = {
