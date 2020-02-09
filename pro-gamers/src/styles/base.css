@@ -16,3 +16,12 @@ ul.nav-links li {
 .container-custom {
   padding-top: 30px;
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+}
