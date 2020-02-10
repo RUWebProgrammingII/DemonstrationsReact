@@ -5,7 +5,7 @@ const SearchBar = ({ value, changeFn }) => (
     <input
       placeholder="Search for news item.."
       value={ value }
-      onInput={ changeFn }
+      onChange={ changeFn }
       type="text"
       className="form-control" />
   </div>
