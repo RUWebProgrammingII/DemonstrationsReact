@@ -1,0 +1,74 @@
+{
+    "games": [
+        {
+            "name": "Legend of Zelda - Ocarina of Time",
+            "coverImage": "https://www.mobygames.com/images/covers/l/56747-the-legend-of-zelda-ocarina-of-time-nintendo-64-front-cover.jpg",
+            "releaseYear": "1998",
+            "platform": "Nintento 64",
+            "place": 1
+        },
+        {
+            "name": "Final Fantasy IX",
+            "coverImage": "https://www.mobygames.com/images/covers/l/5871-final-fantasy-ix-playstation-front-cover.jpg",
+            "releaseYear": "2000",
+            "platform": "Playstation 1",
+            "place": 2
+        },
+        {
+            "name": "Fallout 2",
+            "coverImage": "https://vignette.wikia.nocookie.net/fallout/images/2/2f/F2coverpl.jpg",
+            "releaseYear": "1998",
+            "platform": "PC",
+            "place": 3
+        },
+        {
+            "name": "Last of Us",
+            "coverImage": "https://vignette.wikia.nocookie.net/thelastofus/images/a/a1/TLOUBoxart.jpg",
+            "releaseYear": "2013",
+            "platform": "Playstation 3",
+            "place": 4
+        },
+        {
+            "name": "Super Mario Bros. 3",
+            "coverImage": "https://vignette.wikia.nocookie.net/gamegrumps/images/4/48/SuperMarioBros3.jpg",
+            "releaseYear": "1988",
+            "platform": "Nintento Entertainment System",
+            "place": 5
+        },
+        {
+            "name": "Final Fantasy VII",
+            "coverImage": "https://watchusplaygames.files.wordpress.com/2013/02/final-fantasy-vii-cover-cloud-box-artwork-ps1.jpg",
+            "releaseYear": "1997",
+            "platform": "Playstation 1",
+            "place": 6
+        },
+        {
+            "name": "Monkey Island - The Curse of Monkey Island",
+            "coverImage": "https://www.mobygames.com/images/covers/l/41613-the-curse-of-monkey-island-windows-front-cover.jpg",
+            "releaseYear": "1997",
+            "platform": "PC",
+            "place": 7
+        },
+        {
+            "name": "Contra",
+            "coverImage": "https://static.giantbomb.com/uploads/scale_small/9/93770/2361240-nes_contra.jpg",
+            "releaseYear": "1987",
+            "platform": "Nintento Entertainment System",
+            "place": 8
+        },
+        {
+            "name": "Doom",
+            "coverImage": "https://www.mobygames.com/images/covers/l/3907-doom-dos-front-cover.jpg",
+            "releaseYear": "1993",
+            "platform": "MS-DOS",
+            "place": 9
+        },
+        {
+            "name": "RollerCoaster Tycoon",
+            "coverImage": "https://www.mobygames.com/images/covers/l/362-rollercoaster-tycoon-windows-front-cover.jpg",
+            "releaseYear": "1999",
+            "platform": "PC",
+            "place": 10
+        }
+    ]
+}

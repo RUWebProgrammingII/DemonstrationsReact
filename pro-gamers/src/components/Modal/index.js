@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Modal = ({ isOpen, close, onSubmit, title, children }) => (
   <div className="modal-overlay" style={{ display: isOpen ? 'block' : 'none' }}>
@@ -23,5 +24,16 @@ const Modal = ({ isOpen, close, onSubmit, title, children }) => (
     </div>
   </div>
 );
+
+Modal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  close: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  title: PropTypes.string,
+};
+
+Modal.defaultProps = {
+  title: 'Modal title',
+};
 
 export default Modal;

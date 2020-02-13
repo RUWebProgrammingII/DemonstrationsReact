@@ -25,3 +25,38 @@ ul.nav-links li {
   left: 0;
   background-color: rgba(0, 0, 0, .5);
 }
+
+.category {
+  display: inline-block;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-image: linear-gradient(to bottom right, white, blue);
+}
+
+.game {
+  display: grid;
+  grid-template-columns: 50px 3fr 1fr;
+  padding: 10px 0;
+  border-top: solid 5px #DA2B27;
+}
+
+.game .place {
+  align-self: center;
+  font-size: 3em;
+}
+
+.game > div:last-child {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.game .img {
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

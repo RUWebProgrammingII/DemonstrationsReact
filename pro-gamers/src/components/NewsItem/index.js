@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NewsItem = ({ id, title, shortDescription, category, onEdit, onDelete }) => (
   <div className="card card-body bg-light news-item">
-    <h3>{ title }</h3>
+    <h3><Link to={`/${id}`}>{ title }</Link></h3>
     <p>{ shortDescription }</p>
     <p>{ category }</p>
     <div className="btn-group">
