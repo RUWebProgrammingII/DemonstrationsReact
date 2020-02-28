@@ -7,6 +7,7 @@ import News from './components/News';
 import NewsItemDetails from './components/NewsItemDetails';
 import TopGames from './components/TopGames';
 import About from './components/About';
+import SignupForm from './components/SignupForm';
 import NotFound from './components/NotFound';
 import { UserProvider } from './context/userContext';
 import { ThemeProvider } from './context/themeContext';
@@ -43,6 +44,7 @@ class App extends React.Component {
                 <Route exact path="/news" render={ () => <Redirect to="/" /> } />
                 <Route exact path="/topgames" component={ TopGames } />
                 <Route exact path="/about" component={ About } />
+                <Route exact path="/signup" component={ SignupForm } />
                 <Route exact path="/:newsItemId" component={ NewsItemDetails } />
                 <Route path="*" component={ NotFound } />
               </Switch>

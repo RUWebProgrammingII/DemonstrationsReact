@@ -18,6 +18,12 @@ const NavLinks = () => (
     <li>
       <NavLink
         exact
+        to="/signup"
+        className="navigation-link">Signup now!</NavLink>
+    </li>
+    <li>
+      <NavLink
+        exact
         to="/about"
         className="navigation-link">About</NavLink>
     </li>
