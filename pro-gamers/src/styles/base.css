@@ -68,3 +68,8 @@ ul.nav-links li {
 .navbar.bg-dark a {
   color: white;
 }
+
+.error {
+  color: red;
+  font-weight: bold;
+}
