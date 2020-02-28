@@ -21,36 +21,29 @@ class News extends React.Component {
   };
 
   filterList() {
-    const { news, search, filter } = this.state;
+    const { search, filter, news } = this.state;
     const filteredNews = news.filter(n => (n.category === filter || filter === '') && (n.title.toLowerCase().includes(search.toLowerCase()) || search === ''));
     return filteredNews;
   }
 
-  editItem(newsItem) {
-    this.setState({
-      news: this.state.news.map(n => {
-        if (n.id === newsItem.id) {
-          return newsItem;
-        }
-        return n;
-      }),
-      isModalOpen: false,
-    });
+  deleteItem(id) {
+    // TODO: Make an actual network call deleting the item
+    this.setState({ news: this.state.news.filter(n => n.id !== id) });
   }
 
   addItem(newsItem) {
-    const { news } = this.state;
-    this.setState({
-      news: [ ...news, newsItem ],
-      isModalOpen: false,
-    });
+    // TODO: Make an actual network call adding the item
+    this.setState({ news: [ ...this.state.news, newsItem ], isModalOpen: false });
   }
 
-  removeItem(id) {
-    const { news } = this.state;
-    this.setState({
-      news: news.filter(n => n.id !== id),
-    });
+  editItem(newsItem) {
+    // TODO: Make an actual network call editing the item
+    this.setState({ news: this.state.news.map(n => {
+      if (n.id === newsItem.id) {
+        return newsItem;
+      }
+      return n;
+    }), isModalOpen: false });
   }
 
   openModal(type, newsItem) {
@@ -62,23 +55,23 @@ class News extends React.Component {
   }
 
   renderModal() {
-    const { selectedItem, isModalOpen } = this.state;
+    const { selectedItem } = this.state;
     if (selectedItem) {
       return (
         <EditModal
           title="Edit news item"
-          isOpen={ isModalOpen }
-          close={ () => this.setState({ isModalOpen: false, selectedItem: null }) }
+          isOpen={ this.state.isModalOpen }
+          onSubmit={ newsItem => this.editItem(newsItem) }
           newsItem={ selectedItem }
-          onSubmit={ newsItem => this.editItem(newsItem) }/>
+          close={ () => this.setState({ isModalOpen: false, selectedItem: null }) } />
       )
     }
     return (
       <EditModal
         title="Add news item"
-        isOpen={ isModalOpen }
-        close={ () => this.setState({ isModalOpen: false }) }
-        onSubmit={ newsItem => this.addItem(newsItem) }/>
+        isOpen={ this.state.isModalOpen }
+        onSubmit={ newsItem => this.addItem(newsItem) }
+        close={ () => this.setState({ isModalOpen: false }) } />
     )
   }
 
@@ -106,7 +99,7 @@ class News extends React.Component {
         <NewsList
           news={ filteredList }
           editItem={ newsItem => this.openModal('edit', newsItem) }
-          removeItem={ id => this.removeItem(id) } />
+          deleteItem={ id => this.deleteItem(id) } />
         { this.renderModal() }
       </div>
     );

@@ -1,15 +1,15 @@
 import React from 'react';
 import NewsItem from '../NewsItem';
 
-const NewsList = ({ news, editItem, removeItem }) => (
+const NewsList = ({ news, editItem, deleteItem }) => (
   <div>
     { news.map(n => <NewsItem
       key={ n.id }
-      editItem={ editItem }
-      removeItem={ removeItem }
       id={ n.id }
       title={ n.title }
       shortDescription={ n.shortDescription }
+      onEdit={ editItem }
+      onDelete={ deleteItem }
       category={ n.category } />) }
   </div>
 );

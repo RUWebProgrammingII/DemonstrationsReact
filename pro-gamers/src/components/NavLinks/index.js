@@ -1,15 +1,25 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const NavLinks = () => (
   <ul className="nav-links">
     <li>
-      <a href="#">Top 10 Games</a>
+      <NavLink
+        exact
+        to="/"
+        className="navigation-link">News</NavLink>
     </li>
     <li>
-      <a href="#">News</a>
+      <NavLink
+        exact
+        to="/topgames"
+        className="navigation-link">Top 10 Games</NavLink>
     </li>
     <li>
-      <a href="#">About</a>
+      <NavLink
+        exact
+        to="/about"
+        className="navigation-link">About</NavLink>
     </li>
   </ul>
 );

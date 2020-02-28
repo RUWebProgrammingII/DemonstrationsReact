@@ -7,7 +7,6 @@ const availableCategories = [
   { label: 'World', value: 'world' },
 ];
 
-// Can add or edit
 class EditModal extends React.Component {
   state = {
     title: '',
@@ -18,20 +17,19 @@ class EditModal extends React.Component {
   componentDidUpdate(prevProps) {
     const { newsItem } = this.props;
     if (newsItem && !prevProps.newsItem) {
-      // Edit
+      // This is an editing modal and state values must be populated
       const { title, shortDescription, category } = newsItem;
       this.setState({ title, shortDescription, category });
     }
 
     if (prevProps.newsItem && !newsItem) {
-      // Add
       this.setState({ title: '', shortDescription: '', category: '' });
     }
   }
 
   onInputChange(e) {
     this.setState({ [ e.target.name ]: e.target.value });
-  };
+  }
 
   renderForm() {
     const { title, shortDescription, category } = this.state;
@@ -42,48 +40,44 @@ class EditModal extends React.Component {
           <input
             type="text"
             value={ title }
-            name="title"
+            onChange={ e => this.onInputChange(e) }
             className="form-control"
-            onChange={ e => this.onInputChange(e) } />
+            name="title" />
         </div>
         <div className="form-group">
           <label htmlFor="shortDescription">Short description</label>
           <input
             type="text"
             value={ shortDescription }
-            name="shortDescription"
+            onChange={ e => this.onInputChange(e) }
             className="form-control"
-            onChange={ e => this.onInputChange(e) } />
+            name="shortDescription" />
         </div>
         <div className="form-group">
           <label htmlFor="category">Category</label>
-          <select
-            className="form-control"
-            value={ category }
-            onChange={ e => this.onInputChange(e) }
-            name="category">
+          <select name="category" value={ category } className="form-control" onChange={ e => this.onInputChange(e) }>
             { availableCategories.map(ac => <option key={ ac.value } value={ ac.value }>{ ac.label }</option>) }
           </select>
         </div>
       </form>
-    );
+    )
   }
 
   render() {
-    const { isOpen, close, onSubmit, title } = this.props;
+    const { title, isOpen, close, onSubmit, newsItem } = this.props;
     return (
       <Modal
         title={ title }
         isOpen={ isOpen }
         close={ close }
         onSubmit={ () => {
-          const id = this.props.newsItem ? this.props.newsItem.id : 0;
-          onSubmit({ id, title: this.state.title, shortDescription: this.state.shortDescription, category: this.state.category });
+          const id = newsItem ? newsItem.id : 0;
+          onSubmit({ id, title: this.state.title, shortDescription: this.state.shortDescription, category: this.state.category })
         } }>
         { this.renderForm() }
       </Modal>
-    );
+    )
   }
-};
+}
 
 export default EditModal;
