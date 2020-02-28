@@ -60,3 +60,11 @@ ul.nav-links li {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.navbar.bg-dark {
+  color: white;
+}
+
+.navbar.bg-dark a {
+  color: white;
+}
