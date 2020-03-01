@@ -1,15 +1,25 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Header = ({ counter, user, weather }) => {
-  return <nav className="navbar navbar-expand-lg navbar-dark bg-primary">{ counter } - { user.name } - { user.age } - { weather }°C</nav>;
-};
+const Header = ({ counter, user, currentDegree }) => (
+  <nav className="navbar-custom">
+    <p>Current counter is: { counter }</p>
+    <p>Current degree is: { currentDegree }°C</p>
+    {
+      Object.keys(user).length > 0
+      ?
+      <p>Name: { user.name }, Age: { user.age }</p>
+      :
+      <></>
+    }
+  </nav>
+);
 
-const mapStateToProps = ({ counter, user, weather }) => {
+const mapStateToProps = reduxStoreState => {
   return {
-    counter,
-    user,
-    weather
+    counter: reduxStoreState.counter,
+    user: reduxStoreState.user,
+    currentDegree: reduxStoreState.weather,
   };
 };
 

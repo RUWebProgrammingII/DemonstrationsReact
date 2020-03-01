@@ -1,8 +1,8 @@
 import { INCREMENT } from '../constants';
 
-export const increment = number => {
+export const incrementCounter = counter => {
   return {
     type: INCREMENT,
-    payload: number
+    payload: counter,
   };
 };

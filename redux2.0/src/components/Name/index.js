@@ -1,44 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { changeUser } from '../../actions/userActions';
 
-class Name extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      age: 0
-    };
-  }
-  onInput(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  }
-  onSubmit(e) {
-    e.preventDefault();
-    const { changeUser } = this.props;
-    const { name, age } = this.state;
-    changeUser(name, age);
-  }
-  render() {
-    const { name, age } = this.state;
-    return (
-      <div className="text-center" style={{ marginTop: 40 }}>
-        <form action="" onSubmit={e => this.onSubmit(e)} className="form-horizontal">
-          <div className="form-group">
-            <input type="text" name="name" id="name" value={ name } onChange={e => this.onInput(e)} />
-          </div>
-          <div className="form-group">
-            <input type="number" name="age" id="age" value={ age } onChange={e => this.onInput(e)} />
-          </div>
-          <div className="form-group">
-            <input type="submit" value="Change name!" className="btn btn-primary" />
-          </div>
-        </form>
-      </div>
-    )
-  }
-};
+const Name = ({ changeUser }) => {
+  const [ name, setName ] = useState('');
+  const [ age, setAge ] = useState(0);
+
+  return (
+    <form action="">
+      <input
+        type="text"
+        className="form-control"
+        value={ name }
+        onChange={ e => setName(e.target.value) } />
+      <input
+        type="number"
+        className="form-control"
+        value={ age }
+        onChange={ e => setAge(e.target.value) } />
+      <button onClick={ e => {
+        e.preventDefault();
+        changeUser(name, age);
+      } }>
+        Submit
+      </button>
+    </form>
+  )
+}
 
 export default connect(null, { changeUser })(Name);

@@ -20,7 +20,6 @@ class RemoteSelectItem extends React.Component {
   __getData() {
     const { isDisabled, getData } = this.props;
     if (!isDisabled) {
-      alert(`Getting ${this.props.name}`)
       getData().then(data => this.setState({ data }));
     }
   }
