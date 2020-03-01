@@ -1,17 +1,18 @@
 import weatherService from '../services/weatherService';
 import { GET_CURRENT_DEGREE } from '../constants';
 
-export const getCurrentDegree = () => {
-  return dispatch => {
-    return weatherService.getCurrentDegree().then(d => {
-      dispatch(getCurrentDegreeSuccess(d));
-    });
-  };
+export const getCurrentDegree = () => async dispatch => {
+  try {
+    const mainTemp = await weatherService.getCurrentDegree();
+    dispatch(getCurrentDegreeSuccess(mainTemp));
+  } catch (err) {
+    // TODO: Handle error
+  }
 };
 
-const getCurrentDegreeSuccess = degree => {
+const getCurrentDegreeSuccess = mainTemp => {
   return {
     type: GET_CURRENT_DEGREE,
-    payload: degree
+    payload: mainTemp,
   };
 };
